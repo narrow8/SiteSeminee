@@ -56,3 +56,18 @@ footer {
 .card-img-top{
     width: 100%;
 }
+
+#meniu{
+    background-color: #D2691E;
+    border: 2px solid #D2691E;
+}
+
+.nav-li{
+    color: #FFFFF0;
+    background-color: #D2691E;
+    margin-right: 5px;
+}
+
+.card-title{
+    color:#D2691E;
+}
