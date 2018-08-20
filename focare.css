@@ -1,5 +1,5 @@
 body{
-    background-color: #eee;
+    background-color: #fffff0;
 }
 /* Remove the navbar's default rounded borders and increase the bottom margin */ 
 .navbar {
@@ -10,8 +10,21 @@ body{
 
 /* Remove the jumbotron's default bottom margin */ 
 .jumbotron {
-    margin-bottom: 0;
+    color: #fffff0;
+    margin-bottom: 3%;
+    min-height: 30em;
+    background-image: url('jumbotron.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
 }
+
+.jumbotron_txt
+{
+    display: flex;
+    align-items: center;
+}
+
 /* Add a gray background color and some padding to the footer */
 footer {
     background-color: #f2f2f2;
@@ -23,13 +36,6 @@ footer {
     border-radius: 2%;
     padding: 5%;
 }
-
-.pagi
-{
-    margin: auto;
-    width: 20%;
-}
-
 .container
 {
     width: 70%;
@@ -63,27 +69,29 @@ footer {
 #meniu{
     background-color: #D2691E;
     border: 0px;
+    opacity: .7;
+    height: 4em;
 }
 
 .nav-li>a,.navbar-inverse .navbar-nav>.active>a{
     background-color: #D2691E;
-    margin-right: 5px;
-    border-top: 1px solid #D2691E;
-    border-bottom: 1px solid #D2691E;
+    margin-right: 25px;
+    border-top: 3px solid #D2691E;
+    border-bottom: 3px solid #D2691E;
 }
 
 .navbar-inverse .navbar-nav > .nav-li > a{
     color: #fffff0;
 }
 
-.navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
-    background-color: #D2691E;
-    animation: border-anim 3s linear 0s 1 normal;
+@keyframes border-anim{
+    from{border-top-color:#D2691E; border-bottom-color:#D2691E}
+    to{border-top-color:#fffff0; border-bottom-color:#fffff0;}
 }
 
-@keyframes border-anim{
-    0%{border-top-color:#D2691E; border-bottom-color:#D2691E}
-    100%{border-top-color:#fffff0; border-bottom-color:#fffff0;}
+.navbar-inverse .navbar-nav>.active .nav-li>a:focus, .navbar-inverse .navbar-nav>.active .nav-li>a:hover, .navbar-inverse .navbar-nav>.nav-li>a:focus, .navbar-inverse .navbar-nav>.nav-li>a:hover{
+    background-color: #D2691E;
+    animation: border-anim .2s linear 0s 1 normal forwards;
 }
 
 #continut{
@@ -102,4 +110,18 @@ footer {
 
 .card-title{
     color:#D2691E;
+}
+
+.pagi
+{
+    margin: auto;
+    width: 20%;
+}
+
+.pagi > nav > .pagination > .page-item{
+    background-color: #D2691E;
+}
+
+.pagi > nav > .pagination > .page-item > .page-link{
+    color: #fffff0;
 }
