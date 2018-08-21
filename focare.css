@@ -1,5 +1,6 @@
-*{
-    text-decoration: none;
+@keyframes border-anim{
+    from{border-top-color:#D2691E; border-bottom-color:#D2691E}
+    to{border-top-color:#fffff0; border-bottom-color:#fffff0;}
 }
 
 body{
@@ -10,6 +11,7 @@ body{
     margin-bottom: 50px;
     border-radius: 0;
 }
+
 
 
 /* Remove the jumbotron's default bottom margin */ 
@@ -92,11 +94,6 @@ footer {
 
 .navbar-inverse .navbar-nav > .nav-li > a{
     color: #fffff0;
-}
-
-@keyframes border-anim{
-    from{border-top-color:#D2691E; border-bottom-color:#D2691E}
-    to{border-top-color:#fffff0; border-bottom-color:#fffff0;}
 }
 
 .navbar-inverse .navbar-nav>.active .nav-li>a:focus, .navbar-inverse .navbar-nav>.active .nav-li>a:hover, .navbar-inverse .navbar-nav>.nav-li>a:focus, .navbar-inverse .navbar-nav>.nav-li>a:hover{
