@@ -12,7 +12,11 @@ body{
     border-radius: 0;
 }
 
-
+.dropdown-menu, .dropdown-menu
+{
+    background-color: #D2691E;
+    color: ivory;
+}
 
 /* Remove the jumbotron's default bottom margin */ 
 .jumbotron {
@@ -87,7 +91,7 @@ footer {
 
 .nav-li>a,.navbar-inverse .navbar-nav>.active>a{
     background-color: #D2691E;
-    margin-right: 25px;
+    margin-right: 5px;
     border-top: 3px solid #D2691E;
     border-bottom: 3px solid #D2691E;
 }
@@ -148,6 +152,12 @@ footer {
 {
     margin: auto;
     width: 20%;
+}
+
+.pagination > li > a
+{
+    background-color: #D2691E;
+    color: ivory;
 }
 
 .pagi > nav > .pagination > .page-item{
