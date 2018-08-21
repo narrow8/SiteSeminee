@@ -18,6 +18,19 @@ body{
     color: ivory;
 }
 
+.dropdown-menu>li>a{
+    color: ivory;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+    color: ivory;
+    background-color: #D2691E;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+    border-color: #D2691E;
+}
+
 /* Remove the jumbotron's default bottom margin */ 
 .jumbotron {
     color: #fffff0;
@@ -77,6 +90,7 @@ footer {
     top: 0;
     width: 100%;
     z-index: 1000;
+    opacity: 0.7;
 }
 
 .card-img-top{
@@ -85,7 +99,6 @@ footer {
 #meniu{
     background-color: #D2691E;
     border: 0px;
-    opacity: .7;
     height: 4em;
 }
 
@@ -106,8 +119,10 @@ footer {
 }
 
 .big-container{
-    width: 75%;
+    margin-left: 2%;
+    width: 70%;
     float:right;
+    border-left: 1.5px solid #787878;
 }
 
 .sidebar{
@@ -115,8 +130,12 @@ footer {
     position: absolute;
     float:left;
     height: 100%;
-    width: 20%;
-    border-right: 1.5px solid #787878;
+    width: 25%;
+}
+
+#titlu{
+    margin-left: 25%;
+    font-size: 24px;
 }
 
 .sidebar_txt
