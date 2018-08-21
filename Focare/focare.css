@@ -36,7 +36,7 @@ body{
     color: #fffff0;
     margin-bottom: 3%;
     min-height: 30em;
-    background-image: url('Images/Main/jumbotron.jpg');
+    background-image: url('../Images/Main/jumbotron.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     text-align: center;
@@ -93,6 +93,8 @@ footer {
     opacity: 0.7;
 }
 
+
+
 .card-img-top{
     width: 100%;
 }
@@ -119,10 +121,8 @@ footer {
 }
 
 .big-container{
-    margin-left: 2%;
-    width: 70%;
+    width: 75%;
     float:right;
-    border-left: 1.5px solid #787878;
 }
 
 .sidebar{
@@ -130,12 +130,8 @@ footer {
     position: absolute;
     float:left;
     height: 100%;
-    width: 25%;
-}
-
-#titlu{
-    margin-left: 25%;
-    font-size: 24px;
+    width: 20%;
+    border-right: 1.5px solid #787878;
 }
 
 .sidebar_txt
