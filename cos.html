@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Galeria de seminee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="cos.css">
+</head>
+<body>
+
+  <div class="jumbotron jumbotron_txt">
+  
+    <div class="container text-center">
+      <h1>Galeria de seminee</h1>      
+      <p>- Cea mai variata gama de seminee -</p>
+    </div>
+
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-lg" id="meniu">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active nav-li"><a href="#"><span class="glyphicon glyphicon-home"></span> Acasa</a></li>
+        <li class="nav-li dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Focare <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Focare Dubla Conbustie</a></li>
+            <li><a href="#">Focare Fonta Complet</a></li>
+            <li><a href="#">Focare Otel</a></li>
+            <li><a href="#">Focare Centrala</a></li>
+            <li><a href="#">Focare Peleti</a></li>
+          </ul>
+        </li>
+        <li class="nav-li dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cosuri de fum <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Triplu Strat</a></li>
+            <li><a href="#">Cosuri de fum Otel/Inox</a></li>
+            <li><a href="#">Accesorii Cosuri de fum</a></li>
+            <li><a href="#">Intretinerea Cosului Tau!</a></li>
+          </ul>
+        </li>
+        <li class="nav-li"><a href="#">Izolatii seminee</a></li>
+        <li class="nav-li dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grile seminee <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Grile 10x20cm</a></li>
+              <li><a href="#">Grile 16x16cm</a></li>
+              <li><a href="#">Grile 16x32cm</a></li>
+              <li><a href="#">Grile 16x45cm</a></li>
+              <li><a href="#">Grile Tunel</a></li>
+            </ul>
+          </li>
+        <li class="nav-li dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accesorii <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Vatraie, Cosuri lemne </a></li>
+            <li><a href="#">Intretinere seminee</a></li>
+          </ul>
+        </li>
+        <li class="nav-li"><a href="#">Contact</a></li>
+        <li class="nav-li"><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<div class="text-center">
+    <b>Produse in cos</b>
+</div><br><br><br>
+<div class="container-produse">
+    <div class="row" id="produse">
+        <div class="col-sm-6 text-center top-padding">Produs</div>
+        <div class="col-sm-6 text-center top-padding">Valoare</div>
+    </div>
+</div><br><br><br><br>
+
+<div class="container top-padding">
+    <table class="table table-striped">
+       <tbody>
+          <tr>
+             <td colspan="1">
+                <form class="well form-horizontal">
+                   <fieldset>
+                        <div class="form-group">
+                                <label class="col-md-4 control-label">Detalii de facturare </label><br>
+                        </div><br>
+                        
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Nume complet</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input id="fullName" name="fullName" placeholder="Nume complet" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Adresa </label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="addressLine1" name="addressLine1" placeholder="Adresa " class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Adresa </label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="addressLine2" name="addressLine2" placeholder="Adresa " class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Oras</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="Oras" name="Oras" placeholder="Oras" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Judet</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="state" name="state" placeholder="Judet" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Cod postal</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="postcode" name="postcode" placeholder="Cod postal" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Tara</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="postcode" name="postcode" placeholder="Tara" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Email</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span><input id="email" name="email" placeholder="Email" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Numar de telefon</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span><input id="phoneNumber" name="phoneNumber" placeholder="Numar de telefon" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                   </fieldset>
+                </form>
+             </td>
+             <td colspan="1">
+                <form class="well form-horizontal">
+                   <fieldset>
+                        <div class="form-group">
+                                <label class="col-md-4 control-label">Adresa de livrare(optional) </label><br>
+                        </div><br>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Nume complet</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input id="fullName" name="fullName" placeholder="Nume complet" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Adresa </label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="addressLine1" name="addressLine1" placeholder="Adresa " class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Adresa </label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="addressLine2" name="addressLine2" placeholder="Adresa " class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Oras</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="Oras" name="Oras" placeholder="Oras" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Judet</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="state" name="state" placeholder="Judet" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Cod postal</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="postcode" name="postcode" placeholder="Cod postal" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Tara</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="postcode" name="postcode" placeholder="Tara" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Email</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span><input id="email" name="email" placeholder="Email" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                         <label class="col-md-4 control-label">Numar de telefon</label>
+                         <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span><input id="phoneNumber" name="phoneNumber" placeholder="Numar de telefon" class="form-control" required="true" value="" type="text"></div>
+                         </div>
+                      </div>
+                   </fieldset>
+                </form>
+             </td>
+          </tr>
+       </tbody>
+    </table>
+ </div>
+ <div class="text-center">
+     <button class="buton-comanda">
+         Plaseaza comanda
+     </button>
+ </div>
+
+<div class="pagi">
+    <ul class="pagination">
+    </ul>
+</div>
+
+<footer class="container-fluid text-center">
+    <p>Copyright Depozit Seminee</p>  
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="stickynavbar.js"></script>
+<script src="cos.js"></script>
+</body>
+</html>

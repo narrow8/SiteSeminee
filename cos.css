@@ -108,6 +108,13 @@ footer {
     width: 80%;
 }
 
+.container-produse{
+    background-color: lightgray;
+    width: 80%;
+    height: 3em;
+    margin-left: 10%;
+}
+
 .shopping_btn
 {
     border:2px solid black;
@@ -242,4 +249,18 @@ footer {
     border-radius: 10%;
     height: 2em;
     color: #fffff0;
+}
+
+.top-padding{
+    margin-top: 1em;
+}
+
+.product-line{
+    border-bottom: solid 1px lightgray;
+}
+
+.sterge{
+    background-color: transparent;
+    color: red;
+    float: right;
 }
