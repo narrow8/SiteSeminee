@@ -51,47 +51,59 @@ function populate()
         var delete_button = document.createElement("button");
         var node = document.createTextNode("Sterge");
         delete_button.appendChild(node);
-        delete_button.addEventListener("click", function(){
-            document.getElementById(delete_button.parentElement.parentElement.id).remove();
+
+        delete_button.onclick = function(){
+            
             var sem;
             var pric;
 
             var j = 0;
 
-            sem = delete_button.parentElement.parentElement.firstChild.textContent;
-            pric = delete_button.parentElement.parentElement.lastChild.textContent.split("$")[1].split("Sterge")[0];
+            sem = this.parentElement.parentElement.firstChild.textContent;
+            pric = this.parentElement.parentElement.lastChild.textContent.split("$")[1].split("Sterge")[0];
             var semin = new Array();
             var pric2 = new Array();
 
             var seminee2 = JSON.parse(sessionStorage.getItem('seminee'));
             var prices2 = JSON.parse(sessionStorage.getItem('prices'));
+            var k2 = JSON.parse(sessionStorage.getItem('k'));
 
             var not_deleted = 1;
 
-            seminee2.forEach(semi => {
+            for (var l = 0; l < k2; l++)
+            {
                 if (not_deleted == 0)
                 {
-                    semin[j] = semi;
-                    pric2[j] = pric;
+                    semin[j] = seminee2[l];
+                    pric2[j] = prices2[l];
                     j++;
                 }
                 else
                 {
-                    if (semi.textContent != sem.textContent){
-                        semin[j] = semi;
-                        pric2[j] = pric;
+                    if (seminee2[l] != sem){
+                        semin[j] = seminee2[l];
+                        pric2[j] = prices2[l];
+                        
                         j++;
                    }
-                   else
+                   else{
                        not_deleted = 0;
+                   }
                 }
-            });
+            }
+
+            sessionStorage.clear();
 
             sessionStorage.setItem('seminee', JSON.stringify(semin));
             sessionStorage.setItem('prices', JSON.stringify(pric2));
             sessionStorage.setItem('k', JSON.stringify(j));
+
+            document.getElementById(this.parentElement.parentElement.id).remove();
+
             location.reload();
-        });
+
+        };
+
         delete_button.classList.add("sterge");
         pret.appendChild(delete_button);
         total += parseInt(prices[i]);
@@ -107,6 +119,7 @@ function populate()
     semineu.classList.add("col-xs-6");
     semineu.classList.add("text-center");
     semineu.classList.add("top-padding");
+
     row.appendChild(semineu);
     var pret = document.createElement("div");
     var node = document.createTextNode('$' + total);
@@ -118,5 +131,6 @@ function populate()
 }
 
 document.body.onload = function(){
-    populate();
+    if (location.pathname.includes("cos.html"))
+        populate();
 }

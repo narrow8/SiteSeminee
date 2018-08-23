@@ -255,6 +255,10 @@ footer {
     margin-top: 1em;
 }
 
+.bottom-padding{
+    margin-bottom: 1em;
+}
+
 .product-line{
     border-bottom: solid 1px lightgray;
 }
