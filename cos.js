@@ -4,11 +4,11 @@ var k = 0;
 
 function add(date_semineu)
 {
-    /*
-    var seminee = JSON.parse(sessionStorage.getItem('seminee'));
-    var prices = JSON.parse(sessionStorage.getItem('prices'));
-    var k = JSON.parse(sessionStorage.getItem('k'));
-    */
+    if (JSON.parse(sessionStorage.getItem('seminee')) != null){
+        seminee = JSON.parse(sessionStorage.getItem('seminee'));
+        prices = JSON.parse(sessionStorage.getItem('prices'));
+        k = JSON.parse(sessionStorage.getItem('k'));
+    }
     prices[k]=date_semineu.split('$')[1].split("Adauga in cos")[0];
     seminee[k]=date_semineu.split('$')[0];
     k++;
@@ -77,7 +77,7 @@ function populate()
                 }
                 else
                 {
-                    if (semi.textContent == sem.textContent){
+                    if (semi.textContent != sem.textContent){
                         semin[j] = semi;
                         pric2[j] = pric;
                         j++;
@@ -90,6 +90,7 @@ function populate()
             sessionStorage.setItem('seminee', JSON.stringify(semin));
             sessionStorage.setItem('prices', JSON.stringify(pric2));
             sessionStorage.setItem('k', JSON.stringify(j));
+            location.reload();
         });
         delete_button.classList.add("sterge");
         pret.appendChild(delete_button);
