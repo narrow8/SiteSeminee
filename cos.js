@@ -25,20 +25,50 @@ function populate()
     var prices = JSON.parse(sessionStorage.getItem('prices'));
     var k = JSON.parse(sessionStorage.getItem('k'));
 
+    var row = document.createElement("input");
+    var element = document.getElementById("fieldset");
+    row.classList.add("text-center");
+    row.value = "Produse in cos: " + k;
+    row.name = "number";
+    element.appendChild(row);
+
+    var row6 = document.createElement("div");
+    element.appendChild(row6);
+    row6.innerHTML = "<br> <br> <br>"; 
+
+    var row2 = document.createElement("div");
+    row2.classList.add("container-produse");
+    element.appendChild(row2);
+    var row3 = document.createElement("div");
+    row3.classList.add("row");
+    row2.appendChild(row3);
+    var row4 = document.createElement("div");
+    var row5 = document.createElement("div");
+    row4.classList.add("col-xs-6");
+    row4.classList.add("top-padding");
+    row4.classList.add("text-center");
+    row5.classList.add("col-xs-6");
+    row5.classList.add("top-padding");
+    row5.classList.add("text-center");
+    row4.innerHTML = "Produs";
+    row5.innerHTML = "Valoare";
+    row3.appendChild(row4);
+    row3.appendChild(row5);
+
     for (var i = 0; i < k; i++)
     {
         var row = document.createElement("div");
-        var element = document.getElementById("produse");
+        var element = document.getElementById("fieldset");
         row.classList.add("row");
         row.classList.add("product-line");
         row.id=i;
         element.appendChild(row);
-        var semineu = document.createElement("div");
-        var node = document.createTextNode(seminee[i]);
-        semineu.appendChild(node);
+        var semineu = document.createElement("input");
         semineu.classList.add("col-xs-6");
         semineu.classList.add("text-center");
         semineu.classList.add("top-padding");
+        semineu.name = i;
+        semineu.value = seminee[i];
         row.appendChild(semineu);
         var pret = document.createElement("div");
         var node = document.createTextNode('$' + prices[i]);
@@ -110,7 +140,7 @@ function populate()
     }
 
     var row = document.createElement("div");
-    var element = document.getElementById("produse");
+    var element = document.getElementById("fieldset");
     row.classList.add("row");
     element.appendChild(row);
     var semineu = document.createElement("div");

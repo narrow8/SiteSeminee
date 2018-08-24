@@ -10,14 +10,22 @@ $mail = new PHPMailer(true);
                          
 try {
 
-    $mailSubject = $_POST['fullName'];
+    $number = str_split($_POST['number'], 16)[1];
+    if ($number > 0){
+        $mailSubject = $_POST['0'];
+
+        for($i = 1; $i < $number; $i++)
+        {
+            $mailSubject = $mailSubject . $_POST[$i];
+        }
+    }
 
     $mail->SMTPDebug = 2;                        
     $mail->isSMTP();                                  
     $mail->Host = 'smtp.gmail.com';  
     $mail->SMTPAuth = true;                        
     $mail->Username = 'reclaimer19mc@gmail.com';              
-    $mail->Password = 'Gaming12!';                          
+    $mail->Password = 'xxx';                          
     $mail->SMTPSecure = 'ssl';                            
     $mail->Port = 465;                                   
 
@@ -29,13 +37,13 @@ try {
     $mail->isHTML(true);                                 
     $mail->Subject = 'Here is the subject';
     $mail->Body    = $mailSubject;
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->AltBody = $mailSubject;
 
     echo '<script type="text/javascript">
     window.location = "cos.html"
     </script>';
-
     $mail->send();
+    
     
     echo 'Message has been sent';
 } catch (Exception $e) {

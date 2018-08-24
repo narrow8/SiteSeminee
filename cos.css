@@ -115,9 +115,8 @@ footer {
 
 .container-produse{
     background-color: lightgray;
-    width: 80%;
+    width: 100%;
     height: 3em;
-    margin-left: 10%;
 }
 
 .shopping_btn
@@ -275,6 +274,11 @@ footer {
 }
 
 input{
+    border: none;
+    background-color: transparent;
+}
+
+.input-enabled{
     background-color: #D2691E;
     border: solid 1.5px; 
     border-radius: 10%;
@@ -282,3 +286,10 @@ input{
     color: #fffff0;
 }
 
+.input-enabled:hover{
+    background-color: ivory;
+    border: solid 1.5px; 
+    border-radius: 10%;
+    height: 2em;
+    color: #D2691E;
+}
