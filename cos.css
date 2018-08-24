@@ -108,6 +108,11 @@ footer {
     width: 80%;
 }
 
+.container-form{
+    width: 60%;
+    margin: auto;
+}
+
 .container-produse{
     background-color: lightgray;
     width: 80%;
@@ -276,3 +281,4 @@ input{
     height: 2em;
     color: #fffff0;
 }
+

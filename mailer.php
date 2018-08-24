@@ -7,29 +7,36 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 $mail = new PHPMailer(true);    
-                          // Passing `true` enables exceptions
+                         
 try {
-    //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
-    $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'xxx@gmail.com';                 // SMTP username
-    $mail->Password = 'xxx';                           // SMTP password
-    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 465;                                    // TCP port to connect to
 
-    //Recipients
+    $mailSubject = $_POST['fullName'];
+
+    $mail->SMTPDebug = 2;                        
+    $mail->isSMTP();                                  
+    $mail->Host = 'smtp.gmail.com';  
+    $mail->SMTPAuth = true;                        
+    $mail->Username = 'reclaimer19mc@gmail.com';              
+    $mail->Password = 'Gaming12!';                          
+    $mail->SMTPSecure = 'ssl';                            
+    $mail->Port = 465;                                   
+
+    
     $mail->setFrom('reclaimer19mc@gmail.com', 'Mailer');
-    $mail->addAddress('reclaimer19mc@gmail.com', 'Joe User');     // Add a recipient
+    $mail->addAddress('reclaimer19mc@gmail.com', 'Joe User');    
 
-    //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
+    
+    $mail->isHTML(true);                                 
     $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->Body    = $mailSubject;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
+    echo '<script type="text/javascript">
+    window.location = "cos.html"
+    </script>';
+
     $mail->send();
+    
     echo 'Message has been sent';
 } catch (Exception $e) {
     echo 'Message could not be sent.';
