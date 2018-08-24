@@ -268,3 +268,11 @@ footer {
     color: red;
     float: right;
 }
+
+input{
+    background-color: #D2691E;
+    border: solid 1.5px; 
+    border-radius: 10%;
+    height: 2em;
+    color: #fffff0;
+}
