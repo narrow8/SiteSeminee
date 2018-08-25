@@ -3,6 +3,17 @@
     to{border-top-color:#fffff0; border-bottom-color:#fffff0;}
 }
 
+.big-container{
+    width: 75%;
+    float:right;
+}
+
+.pagi
+{
+    margin: auto;
+    width: 30%;
+}
+
 @media (max-width: 940px) {
     .navbar-header {
         float: none;
@@ -13,8 +24,7 @@
     .navbar-toggle {
         display: block;
     }
-    .navbar-collapse {
-    }
+
     .navbar-fixed-top {
         top: 0;
         border-width: 0 0 1px;
@@ -45,6 +55,21 @@
     }
     .collapse.in{
         display:block !important;
+    }
+
+    .sidebar{
+        display: none;
+        width: 1%;
+    }
+
+    .big-container{
+        width: 90%;
+        float: none;
+        margin: auto;
+    }
+
+    .pagi{
+        width: 60%;
     }
 }
 
@@ -166,11 +191,6 @@ body{
     color:#fffff0;
 }
 
-.big-container{
-    width: 75%;
-    float:right;
-}
-
 .sidebar{
     margin-left: 2%;
     position: absolute;
@@ -207,12 +227,6 @@ body{
 
 .card-title{
     color:#D2691E;
-}
-
-.pagi
-{
-    margin: auto;
-    width: 20%;
 }
 
 .pagination > li > a
