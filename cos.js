@@ -83,42 +83,20 @@ function populate()
         delete_button.appendChild(node);
 
         delete_button.onclick = function(){
-            
-            var sem;
-            var pric;
 
             var j = 0;
 
-            sem = this.parentElement.parentElement.firstChild.textContent;
-            pric = this.parentElement.parentElement.lastChild.textContent.split("$")[1].split("Sterge")[0];
             var semin = new Array();
             var pric2 = new Array();
 
-            var seminee2 = JSON.parse(sessionStorage.getItem('seminee'));
-            var prices2 = JSON.parse(sessionStorage.getItem('prices'));
             var k2 = JSON.parse(sessionStorage.getItem('k'));
-
-            var not_deleted = 1;
-
-            for (var l = 0; l < k2; l++)
+            
+            for (var g = 0; g < k2; g++)
             {
-                if (not_deleted == 0)
-                {
-                    semin[j] = seminee2[l];
-                    pric2[j] = prices2[l];
+                if (g != this.parentElement.parentElement.id){
+                    semin[j] = document.getElementById(g).firstChild.value;
+                    pric2[j] = document.getElementById(g).lastChild.textContent.split("$")[1].split("Sterge")[0];
                     j++;
-                }
-                else
-                {
-                    if (seminee2[l] != sem){
-                        semin[j] = seminee2[l];
-                        pric2[j] = prices2[l];
-                        
-                        j++;
-                   }
-                   else{
-                       not_deleted = 0;
-                   }
                 }
             }
 
@@ -129,7 +107,6 @@ function populate()
             sessionStorage.setItem('k', JSON.stringify(j));
 
             document.getElementById(this.parentElement.parentElement.id).remove();
-
             location.reload();
 
         };
