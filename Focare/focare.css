@@ -94,10 +94,7 @@ body{
 }
 
 /* Add a gray background color and some padding to the footer */
-footer {
-    background-color: #f2f2f2;
-    padding: 25px;
-}
+
 .card
 {
     border-bottom: 1px solid black;
@@ -231,3 +228,4 @@ footer {
 .pagi > nav > .pagination > .page-item > .page-link{
     color: #fffff0;
 }
+
