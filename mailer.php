@@ -14,7 +14,7 @@ try {
     
     if ($number > 0){
 
-        $mailSubject = $_POST['fullName'] . ', telefon: ' . $_POST['phoneNumber'] . ' a comandat : ';
+        $mailSubject = $_POST['fullName'] . ', telefon: ' . $_POST['phoneNumber'] . ', email: ' . $_POST['email'] . ' a comandat : ';
 
         $mailSubject = $mailSubject . $_POST['0'];
 
