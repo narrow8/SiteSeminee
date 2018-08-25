@@ -3,6 +3,11 @@
     to{border-top-color:#fffff0; border-bottom-color:#fffff0;}
 }
 
+.container-form{
+    width: 60%;
+    margin: auto;
+}
+
 @media (max-width: 940px) {
     .navbar-header {
         float: none;
@@ -44,6 +49,11 @@
     }
     .collapse.in{
         display:block !important;
+    }
+
+    .container-form{
+        width: 90%;
+        margin: auto;
     }
 }
 
@@ -106,11 +116,6 @@ footer {
 .container
 {
     width: 80%;
-}
-
-.container-form{
-    width: 60%;
-    margin: auto;
 }
 
 .container-produse{
@@ -292,4 +297,8 @@ input{
     border-radius: 10%;
     height: 2em;
     color: #D2691E;
+}
+
+.termeni{
+    color: black;
 }

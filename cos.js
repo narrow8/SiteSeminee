@@ -135,6 +135,7 @@ function populate()
     pret.classList.add("text-center");
     pret.classList.add("top-padding");
     row.appendChild(pret);
+
 }
 
 document.body.onload = function(){
