@@ -11,12 +11,16 @@ $mail = new PHPMailer(true);
 try {
 
     $number = str_split($_POST['number'], 16)[1];
+    
     if ($number > 0){
-        $mailSubject = $_POST['0'];
+
+        $mailSubject = $_POST['fullName'] . ', telefon: ' . $_POST['phoneNumber'] . ' a comandat : ';
+
+        $mailSubject = $mailSubject . $_POST['0'];
 
         for($i = 1; $i < $number; $i++)
         {
-            $mailSubject = $mailSubject . $_POST[$i];
+            $mailSubject = $mailSubject  . ', ' . $_POST[$i];
         }
     }
 
@@ -30,12 +34,12 @@ try {
     $mail->Port = 465;                                   
 
     
-    $mail->setFrom('reclaimer19mc@gmail.com', 'Mailer');
+    $mail->setFrom('reclaimer19mc@gmail.com', 'Comanda');
     $mail->addAddress('reclaimer19mc@gmail.com', 'Joe User');    
 
     
     $mail->isHTML(true);                                 
-    $mail->Subject = 'Here is the subject';
+    $mail->Subject = 'Comanda';
     $mail->Body    = $mailSubject;
     $mail->AltBody = $mailSubject;
 
