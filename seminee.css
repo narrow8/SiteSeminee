@@ -112,7 +112,7 @@ body{
     margin-bottom: 3%;
     min-height: 30em;
     background-image: url('Images/Main/jumbotron.jpg');
-    background-size: cover 100%;
+    background-size: covert 100%;
     background-repeat: no-repeat;
     text-align: center;
 }
@@ -125,8 +125,8 @@ body{
 
 /* Add a gray background color and some padding to the footer */
 footer {
+    height: 3em;
     background-color: #f2f2f2;
-    padding: 25px;
 }
 .card
 {
@@ -258,4 +258,17 @@ footer {
     border-radius: 10%;
     height: 2em;
     color: #fffff0;
+}
+
+.test-footer{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.contact{
+    float: left;
+    width: 100%;
+    margin-top: 10em;
+    text-align: center;
 }

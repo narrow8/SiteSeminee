@@ -243,3 +243,9 @@ body{
     color: #fffff0;
 }
 
+.test-footer{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
