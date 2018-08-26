@@ -119,6 +119,10 @@ body{
 }
 
 /* Add a gray background color and some padding to the footer */
+footer {
+    height: 3em;
+    background-color: #f2f2f2;
+}
 
 .card
 {
@@ -247,5 +251,11 @@ body{
     float: left;
     width: 100%;
     text-align: center;
+}
+
+.presentation{
+    width: 30%;
+    height: auto;
+    margin: auto;
 }
 
