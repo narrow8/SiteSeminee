@@ -1,0 +1,315 @@
+@keyframes border-anim{
+    from{border-top-color:#D2691E; border-bottom-color:#D2691E}
+    to{border-top-color:#fffff0; border-bottom-color:#fffff0;}
+}
+
+.big-container{
+    width: 65%;
+    float:right;
+}
+
+.pagi
+{
+    margin: auto;
+    width: 30%;
+}
+
+.presentation{
+    width: 30%;
+    height: auto;
+    float: left;
+    margin-left: 7%;
+    border: #D2691E solid 1px;
+    margin-top: 5em;
+}
+
+.titlu{
+    text-align: center;
+    margin-left : 5%;
+    font-size: 2em;
+    margin-top: 5%;
+    width: auto;
+}
+
+.pret{
+    font-size: 20px;
+    margin-left : 5%;
+    margin-top: 5%;
+    width: 30%;
+    float: left;
+}
+
+@media (max-width: 940px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav .open .dropdown-menu{
+        float: none!important;
+        margin-top: 7.5px;
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: #D2691E;
+        color: #fffff0;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        border-bottom: 1px solid;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+
+    .sidebar{
+        display: none;
+        width: 1%;
+    }
+
+    .big-container{
+        width: 90%;
+        float: none;
+        margin: auto;
+    }
+
+    .pagi{
+        width: 60%;
+    }
+
+    .presentation{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        float: left;
+        border: #D2691E solid 1px;
+        margin-top: 5em;
+    }
+}
+
+body{
+    background-color: #fffff0;
+}
+/* Remove the navbar's default rounded borders and increase the bottom margin */ 
+.navbar {
+    margin-bottom: 50px;
+    border-radius: 0;
+}
+
+.dropdown-menu
+{
+    background-color: #D2691E;
+    color: ivory;
+}
+
+.dropdown-menu>li>a{
+    color: ivory;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+    color: ivory;
+    background-color: #D2691E;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+    border-color: #D2691E;
+}
+
+/* Remove the jumbotron's default bottom margin */ 
+.jumbotron {
+    color: #fffff0;
+    margin-bottom: 3%;
+    min-height: 30em;
+    background-image: url('../Images/Main/jumbotron.jpg');
+    background-size: cover 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.jumbotron_txt
+{
+    display: flex;
+    align-items: center;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    height: 3em;
+    background-color: #f2f2f2;
+}
+
+.card
+{
+    border-bottom: 1px solid black;
+    border-radius: 2%;
+    padding: 5%;
+}
+
+
+.shopping_btn
+{
+    background-color: #D2691E;
+    color:#fffff0;
+    text-decoration: none;
+    border-color: #D2691E;
+    border-radius: 5px;
+}
+
+.shopping_btn:hover{
+    border:2px solid black;
+    border-radius: 5px;
+    color: black;
+}
+
+.scris
+{
+    width: 70%;
+    margin: auto;
+}
+ 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 0.8;
+}
+
+
+
+.card-img-top{
+    width: 100%;
+}
+#meniu{
+    background-color: #D2691E;
+    border: 0px;
+    height: 4em;
+}
+
+.nav-li>a,.navbar-inverse .navbar-nav>.active>a{
+    background-color: #D2691E;
+    margin-right: 5px;
+    border-top: 3px solid #D2691E;
+    border-bottom: 3px solid #D2691E;
+}
+
+.navbar-inverse .navbar-nav > .nav-li > a{
+    color: #fffff0;
+}
+
+.navbar-inverse .navbar-nav>.active .nav-li>a:focus, .navbar-inverse .navbar-nav>.active .nav-li>a:hover, .navbar-inverse .navbar-nav>.nav-li>a:focus, .navbar-inverse .navbar-nav>.nav-li>a:hover{
+    background-color: #D2691E;
+    animation: border-anim .2s linear 0s 1 normal forwards;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a,.navbar-inverse .navbar-nav .open .dropdown-menu {
+    background-color: #D2691E;
+    color:#fffff0;
+}
+
+.sidebar{
+    margin-left: 10%;
+    position: absolute;
+    float:left;
+    height: 100%;
+    width: 15%;
+    border-right: 1.5px solid #787878;
+}
+
+.sidebar_txt
+{
+    position: absolute;
+    top: 15%;
+    width: 90%;
+    left:3%;
+}
+
+.sidebar_txt > div > a, .sidebar_txt > div> a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.sidebar_txt > div{
+    margin-top: 8%;
+}
+
+.sidebar_txt > div> a:hover{
+    color: #D2691E;
+}
+
+.sidebar_subtxt{
+    margin-left: 8%;
+}
+
+.card-title{
+    color:#D2691E;
+}
+
+.pagination > li > a
+{
+    background-color: #D2691E;
+    color: ivory;
+}
+
+.pagi > nav > .pagination > .page-item{
+    background-color: #D2691E;
+}
+
+.pagi > nav > .pagination > .page-item > .page-link{
+    color: #fffff0;
+}
+
+.test-footer{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+#descriere{
+    width: 100%;
+    font-size: 20px;
+}
+
+.top-margin{
+    margin-top: 3em;
+}
+
+.no-float{
+    float: right;
+    margin-right: 5%;
+}
+
+.bottom-border{
+    border-bottom: solid gray 1px;
+}
+
+.white{
+    background-color: white;
+    padding: 2em;
+}
+
+.float-right{
+    width: auto;
+    float: right;
+}
+
