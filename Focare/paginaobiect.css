@@ -307,3 +307,8 @@ footer {
     padding: 2em;
 }
 
+.float-right{
+    width: auto;
+    float: right;
+}
+
