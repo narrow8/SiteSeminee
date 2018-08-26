@@ -4,7 +4,7 @@
 }
 
 .big-container{
-    width: 75%;
+    width: 65%;
     float:right;
 }
 
@@ -163,23 +163,21 @@ footer {
     border-radius: 2%;
     padding: 5%;
 }
-.container
-{
-    width: 80%;
-}
+
 
 .shopping_btn
 {
-    border:2px solid black;
-    border-radius: 5px;
-    color: black;
-}
-
-.shopping_btn:hover{
     background-color: #D2691E;
     color:#fffff0;
     text-decoration: none;
     border-color: #D2691E;
+    border-radius: 5px;
+}
+
+.shopping_btn:hover{
+    border:2px solid black;
+    border-radius: 5px;
+    color: black;
 }
 
 .scris
@@ -229,11 +227,11 @@ footer {
 }
 
 .sidebar{
-    margin-left: 2%;
+    margin-left: 10%;
     position: absolute;
     float:left;
     height: 100%;
-    width: 20%;
+    width: 15%;
     border-right: 1.5px solid #787878;
 }
 
@@ -286,4 +284,17 @@ footer {
     text-align: center;
 }
 
+#descriere{
+    width: 100%;
+    font-size: 20px;
+}
+
+.top-margin{
+    margin-top: 3em;
+}
+
+.no-float{
+    float: right;
+    margin-right: 5%;
+}
 
