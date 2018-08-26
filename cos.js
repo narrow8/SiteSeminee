@@ -37,6 +37,7 @@ function add2(nume, pret)
 function populate()
 {
     var total = 0;
+    var total2 = 0;
     var seminee = JSON.parse(sessionStorage.getItem('seminee'));
     var prices = JSON.parse(sessionStorage.getItem('prices'));
     var k = JSON.parse(sessionStorage.getItem('k'));
@@ -130,7 +131,8 @@ function populate()
         delete_button.classList.add("col-xs-1");
         delete_button.classList.add("sterge");
         row.appendChild(delete_button);
-        total += parseInt(prices[i]);
+        total += parseInt(prices[i].split('.')[0]);
+        total2 += parseInt(prices[i].split('.')[1]);
     }
 
     var row = document.createElement("div");
@@ -146,7 +148,7 @@ function populate()
 
     row.appendChild(semineu);
     var pret = document.createElement("div");
-    var node = document.createTextNode('€' + total);
+    var node = document.createTextNode('€' + total + '.' + total2);
     pret.appendChild(node);
     pret.classList.add("col-xs-5");
     pret.classList.add("text-center");
