@@ -18,8 +18,8 @@ function showContact(){
   else
   {
     sessionStorage.setItem('contact', 1);
-    if (window.location.pathname.includes("focare") || window.location.pathname.includes("grile") || window.location.pathname.includes("cosuri") || window.location.pathname.includes("izolatii") || window.location.pathname.includes("accesorii"))
-      window.location = "../../main.html";
+    if (window.location.pathname.toLowerCase().includes("focare") || window.location.pathname.includes("grile") || window.location.pathname.includes("cosuri") || window.location.pathname.includes("izolatii") || window.location.pathname.includes("accesorii"))
+      window.location = "../main.html";
     else
       window.location = "main.html";
   }
