@@ -123,7 +123,7 @@ function populate()
             sessionStorage.setItem('k', JSON.stringify(j));
 
             document.getElementById(this.parentElement.id).remove();
-            //location.reload();
+            location.reload();
 
         };
 
