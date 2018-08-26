@@ -298,3 +298,12 @@ footer {
     margin-right: 5%;
 }
 
+.bottom-border{
+    border-bottom: solid gray 1px;
+}
+
+.white{
+    background-color: white;
+    padding: 2em;
+}
+
