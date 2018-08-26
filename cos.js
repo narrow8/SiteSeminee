@@ -60,10 +60,10 @@ function populate()
     row2.appendChild(row3);
     var row4 = document.createElement("div");
     var row5 = document.createElement("div");
-    row4.classList.add("col-xs-6");
+    row4.classList.add("col-xs-5");
     row4.classList.add("top-padding");
     row4.classList.add("text-center");
-    row5.classList.add("col-xs-6");
+    row5.classList.add("col-xs-5");
     row5.classList.add("top-padding");
     row5.classList.add("text-center");
     row4.innerHTML = "Produs";
@@ -80,16 +80,16 @@ function populate()
         row.id=i;
         element.appendChild(row);
         var semineu = document.createElement("input");
-        semineu.classList.add("col-xs-6");
+        semineu.classList.add("col-xs-5");
         semineu.classList.add("text-center");
         semineu.classList.add("top-padding");
-        semineu.name = i;
+        semineu.name = "semineu" + i;
         semineu.value = seminee[i];
         row.appendChild(semineu);
-        var pret = document.createElement("div");
-        var node = document.createTextNode('€' + prices[i]);
-        pret.appendChild(node);
-        pret.classList.add("col-xs-6");
+        var pret = document.createElement("input");
+        pret.name = "pret" + i;
+        pret.value =  "€" +  prices[i];
+        pret.classList.add("col-xs-5");
         pret.classList.add("text-center");
         pret.classList.add("top-padding");
         row.appendChild(pret);
@@ -109,9 +109,9 @@ function populate()
             
             for (var g = 0; g < k2; g++)
             {
-                if (g != this.parentElement.parentElement.id){
+                if (g != this.parentElement.id){
                     semin[j] = document.getElementById(g).firstChild.value;
-                    pric2[j] = document.getElementById(g).lastChild.textContent.split("€")[1].split("Sterge")[0];
+                    pric2[j] = document.getElementById(g).childNodes[1].value.split("€")[1].split("Sterge")[0];
                     j++;
                 }
             }
@@ -122,13 +122,14 @@ function populate()
             sessionStorage.setItem('prices', JSON.stringify(pric2));
             sessionStorage.setItem('k', JSON.stringify(j));
 
-            document.getElementById(this.parentElement.parentElement.id).remove();
-            location.reload();
+            document.getElementById(this.parentElement.id).remove();
+            //location.reload();
 
         };
 
+        delete_button.classList.add("col-xs-1");
         delete_button.classList.add("sterge");
-        pret.appendChild(delete_button);
+        row.appendChild(delete_button);
         total += parseInt(prices[i]);
     }
 
@@ -139,7 +140,7 @@ function populate()
     var semineu = document.createElement("div");
     var node = document.createTextNode("Total");
     semineu.appendChild(node);
-    semineu.classList.add("col-xs-6");
+    semineu.classList.add("col-xs-5");
     semineu.classList.add("text-center");
     semineu.classList.add("top-padding");
 
@@ -147,7 +148,7 @@ function populate()
     var pret = document.createElement("div");
     var node = document.createTextNode('€' + total);
     pret.appendChild(node);
-    pret.classList.add("col-xs-6");
+    pret.classList.add("col-xs-5");
     pret.classList.add("text-center");
     pret.classList.add("top-padding");
     row.appendChild(pret);
