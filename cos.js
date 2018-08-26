@@ -9,8 +9,24 @@ function add(date_semineu)
         prices = JSON.parse(sessionStorage.getItem('prices'));
         k = JSON.parse(sessionStorage.getItem('k'));
     }
-    prices[k]=date_semineu.split('$')[1].split("Adauga in cos")[0];
-    seminee[k]=date_semineu.split('$')[0];
+    prices[k]=date_semineu.split('€')[1].split("Adauga in cos")[0];
+    seminee[k]=date_semineu.split('€')[0];
+    k++;
+
+    sessionStorage.setItem('seminee', JSON.stringify(seminee));
+    sessionStorage.setItem('prices', JSON.stringify(prices));
+    sessionStorage.setItem('k', JSON.stringify(k));
+}
+
+function add2(nume, pret)
+{
+    if (JSON.parse(sessionStorage.getItem('seminee')) != null){
+        seminee = JSON.parse(sessionStorage.getItem('seminee'));
+        prices = JSON.parse(sessionStorage.getItem('prices'));
+        k = JSON.parse(sessionStorage.getItem('k'));
+    }
+    prices[k]=pret;
+    seminee[k]=nume;
     k++;
 
     sessionStorage.setItem('seminee', JSON.stringify(seminee));
@@ -71,7 +87,7 @@ function populate()
         semineu.value = seminee[i];
         row.appendChild(semineu);
         var pret = document.createElement("div");
-        var node = document.createTextNode('$' + prices[i]);
+        var node = document.createTextNode('€' + prices[i]);
         pret.appendChild(node);
         pret.classList.add("col-xs-6");
         pret.classList.add("text-center");
@@ -95,7 +111,7 @@ function populate()
             {
                 if (g != this.parentElement.parentElement.id){
                     semin[j] = document.getElementById(g).firstChild.value;
-                    pric2[j] = document.getElementById(g).lastChild.textContent.split("$")[1].split("Sterge")[0];
+                    pric2[j] = document.getElementById(g).lastChild.textContent.split("€")[1].split("Sterge")[0];
                     j++;
                 }
             }
@@ -129,7 +145,7 @@ function populate()
 
     row.appendChild(semineu);
     var pret = document.createElement("div");
-    var node = document.createTextNode('$' + total);
+    var node = document.createTextNode('€' + total);
     pret.appendChild(node);
     pret.classList.add("col-xs-6");
     pret.classList.add("text-center");
