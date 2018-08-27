@@ -56,7 +56,7 @@ if (!isset($_GET['code']) && !isset($_GET['provider'])) {
 exit;
 }
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 session_start();
 
@@ -74,12 +74,12 @@ if (!in_array($providerName, ['Google', 'Microsoft', 'Yahoo'])) {
 
 //These details are obtained by setting up an app in the Google developer console,
 //or whichever provider you're using.
-$clientId = 'RANDOMCHARS-----duv1n2.apps.googleusercontent.com';
-$clientSecret = 'RANDOMCHARS-----lGyjPcRtvP';
+$clientId = '497555911691-edk1dttlkco0u1ds1oe02sp7n5924g4h.apps.googleusercontent.com';
+$clientSecret = 'Fj_Gt-L3tClEkE40hXOfUAYd';
 
 //If this automatic URL doesn't work, set it yourself manually to the URL of this script
 $redirectUri = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
-//$redirectUri = 'http://localhost/PHPMailer/redirect';
+//$redirectUri = 'http://localhost/SiteSeminee-master/PHPMailer/get_oauth_token.php';
 
 $params = [
     'clientId' => $clientId,
