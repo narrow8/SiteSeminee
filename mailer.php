@@ -2,7 +2,9 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\OAuth;
 
+use League\OAuth2\Client\Provider\Google;
 //Load composer's autoloader
 require 'vendor/autoload.php';
 
@@ -29,19 +31,41 @@ try {
         }
         
         $mailSubject .= '</table></body></html>';
-
+        
     $mail->SMTPDebug = 2;                        
     $mail->isSMTP();                                  
     $mail->Host = 'smtp.gmail.com';  
-    $mail->SMTPAuth = true;                        
-    $mail->Username = 'reclaimer19mc@gmail.com';              
-    $mail->Password = 'xxx';                          
+    $mail->SMTPAuth = true;
+    $mail->AuthType = 'XOAUTH2';                   
     $mail->SMTPSecure = 'ssl';                            
-    $mail->Port = 465;                                   
+    $mail->Port = 465;      
+    
+    
+    $email = 'reclaimer19mc@gmail.com';
+    $clientId = '.apps.googleusercontent.com';
+    $clientSecret = '';
+    $refreshToken = '';
+    $provider = new Google(
+        [
+            'clientId' => $clientId,
+            'clientSecret' => $clientSecret,
+        ]
+    );
+    $mail->setOAuth(
+        new OAuth(
+            [
+                'provider' => $provider,
+                'clientId' => $clientId,
+                'clientSecret' => $clientSecret,
+                'refreshToken' => $refreshToken,
+                'userName' => $email,
+            ]
+        )
+    );
 
     
     $mail->setFrom('reclaimer19mc@gmail.com', 'Comanda');
-    $mail->addAddress('reclaimer19mc@gmail.com', 'Joe User');    
+    $mail->addAddress('ghibancostin@gmail.com', 'Joe User');    
 
 
     $mail->isHTML(true);                                 

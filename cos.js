@@ -133,6 +133,11 @@ function populate()
         row.appendChild(delete_button);
         total += parseInt(prices[i].split('.')[0]);
         total2 += parseInt(prices[i].split('.')[1]);
+        if (total2 > 99)
+        {
+            total2 -= 100;
+            total ++;
+        }
     }
 
     var row = document.createElement("div");
